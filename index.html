@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Excel</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #667691;
+        font-family: sans-serif;
+      }
+      tr {
+        height: 3rem;
+        color: white;
+        letter-spacing: 1px;
+        font-size: 1em;
+        font-weight: bold;
+      }
+
+      td {
+        height: 3rem;
+        text-align: center;
+        border: 1px solid white;
+      }
+
+      .table-container {
+        width: 100%
+        padding: 0 2rem
+      }
+
+      .input-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.5rem 0;
+      }
+
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.5rem 0;
+      }
+
+      input {
+        width: 17rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        border: 1px solid #ccc;
+        font-size: 1em;
+      }
+
+      button {
+        width: 10rem;
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        background-color: #24ab02;
+        color: white;
+        font-size: 1em;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .button-green {
+        background-color: #a11b1b;
+      }
+
+      #form-container {
+        padding: 2rem 1rem;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .table-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 5rem;
+        margin-bottom: 4rem;
+      }
+
+      #mytable {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form-container">
+      <div class="input-container">
+        <input id="nomeAdd" type="text" placeholder="Nome" autofocus autocomplete="no">
+        <input id="contatosAdd" type="text" placeholder="Contato" autocomplete="no">
+        <input id="atividadesAdd" type="text" placeholder="Atividade" autocomplete="no">
+      </div>
+      <div class="btn-container">
+        <button id="exportExcel" type="button" class="button-green" value="EXCEL"
+                onclick="javascript:exportExcelFunc('mytable')">Exel</button>
+        <button id="salveTable" type="button" value="SAVE" onclick="saveTableFunc()">Add</button>
+      </div>
+    </form>
+    <div class="table-container">
+      <table id="mytable" cellspacing="0" cellpadding="0">
+        <tr align="center">
+          <td>Nome</td>
+          <td>Contatos</td>
+          <td>Atividades</td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
